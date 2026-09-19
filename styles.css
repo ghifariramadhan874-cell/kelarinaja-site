@@ -1994,7 +1994,7 @@ body {
 }
 
 .score-lbl {
-  font-size: 0.55rem;
+  font-size: 0.62rem;
   font-weight: 800;
   color: #065F46;
   letter-spacing: 0.06em;
@@ -4847,5 +4847,66 @@ body {
     justify-content: center !important;
     padding: 13px 20px !important;
     font-size: 0.92rem !important;
+  }
+}
+
+/* ===== MOBILE RAPIH PASS 19 Sep 2026 ===== */
+/* Calc radio pills: 2-kolom grid, odd-last child span penuh -> tidak ada pill pecah 2 baris */
+.calc-form-col .radio-pill-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.calc-form-col .radio-pill-group .radio-pill:nth-last-child(1):nth-child(odd) {
+  grid-column: span 2;
+}
+.calc-form-col .radio-pill span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  min-height: 40px;
+}
+
+/* Grup pilihan panjang (jenjang/deadline): stack 1 kolom biar gak kepotong/melar.
+   Pakai flex column, bukan grid-template-columns, biar menang atas rule grid 2 kolom */
+.calc-form-col .radio-pill-group.radio-pill-group-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+/* Info box "Paket Pelajar mulai / Paket Mahasiswa mulai" pecah jadi 2 baris lega */
+.res-min-note {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Slider ticks rapi, label terakhir gak mepet kanan */
+.slider-ticks span:last-child {
+  margin-right: 0;
+  text-align: right;
+}
+
+/* Heading profesional: index H1 tiga baris -> 2 baris rapi */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}
+
+/* Tiny font badges index: naikin biar kebaca (0.68/0.62 rem terlalu kecil di HP) */
+@media (max-width: 640px) {
+  .chat-time-tag {
+    font-size: 0.72rem;
+  }
+  .live-metric-box strong {
+    font-size: 0.82rem;
+  }
+  .live-metric-box span {
+    font-size: 0.74rem;
   }
 }

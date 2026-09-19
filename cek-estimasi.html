@@ -7,7 +7,7 @@
   <meta name="description" content="Hitung simulasi biaya pengerjaan tugas secara otomatis berdasarkan jenjang, jenis tugas, jumlah halaman, dan deadline.">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="styles.css?v=2.8">
+  <link rel="stylesheet" href="styles.css?v=3.4">
 </head>
 <body>
 
@@ -87,14 +87,14 @@
         <div class="calc-form-col">
           <div class="calc-group">
             <label class="calc-label"><span class="calc-step-num">1</span> Jenjang Pendidikan</label>
-            <div class="radio-pill-group">
+            <div class="radio-pill-group radio-pill-group-stack">
               <label class="radio-pill">
                 <input type="radio" name="jenjang" value="sekolah" checked>
                 <span>SMP / SMA / SMK</span>
               </label>
               <label class="radio-pill">
                 <input type="radio" name="jenjang" value="kuliah">
-                <span>Mahasiswa<br>D3 / S1</span>
+                <span>Mahasiswa D3 / S1</span>
               </label>
             </div>
           </div>
@@ -125,7 +125,7 @@
 
           <div class="calc-group">
             <label class="calc-label"><span class="calc-step-num">4</span> Batas Waktu (Deadline Pengerjaan)</label>
-            <div class="radio-pill-group">
+            <div class="radio-pill-group radio-pill-group-stack">
               <label class="radio-pill">
                 <input type="radio" name="deadline" value="santai" checked>
                 <span>3 - 5 Hari (Santai)</span>
@@ -152,7 +152,7 @@
                 <span id="totalPrice" class="res-price">35.000</span>
               </div>
               <p class="res-sub">*Harga final dapat menyesuaikan rubrik instruksi spesifik.</p>
-              <p class="res-min-note">Paket Pelajar mulai <strong>Rp 15.000</strong> (PR 1 halaman) &bull; Paket Mahasiswa mulai <strong>Rp 35.000</strong></p>
+              <p class="res-min-note"><strong>Paket Pelajar mulai Rp 15.000</strong> (PR 1 halaman)<br><strong>Paket Mahasiswa mulai Rp 35.000</strong></p>
             </div>
 
             <div class="result-breakdown">
