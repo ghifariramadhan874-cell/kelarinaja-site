@@ -4564,21 +4564,21 @@ body {
    ========================================================================== */
 @media (max-width: 900px) {
   .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 18px !important;
   }
   .logo {
-    order: 1;
+    order: 1 !important;
   }
-  .nav-cta {
-    order: 2;
-    margin-left: auto;
+  .navbar .nav-cta {
+    display: none !important; /* Hide CTA in header on all mobile & tablet screens so hamburger is always on far right edge! */
   }
-  .menu-toggle {
-    display: flex;
-    order: 3;
-    margin-left: 0;
+  .navbar .menu-toggle {
+    display: flex !important;
+    order: 2 !important;
+    margin-left: auto !important;
   }
 }
 
