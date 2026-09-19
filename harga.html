@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Tarif &amp; Paket — KelarinAja</title>
+  <meta name="description" content="Estimasi harga pengerjaan tugas transparan untuk siswa SMP, SMA, Mahasiswa, dan Tugas Express. Bebas biaya tersembunyi.">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon-wrap">
+          <img src="logo.svg" alt="KelarinAja Logo" class="brand-logo-img">
+        </div>
+        <span class="logo-text">Kelarin<span class="logo-accent">Aja</span>.</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="cara-order.html">Cara Order</a>
+        <a href="harga.html" class="active">Tarif</a>
+        <a href="cek-estimasi.html" >Cek Estimasi Biaya</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20tanya%20harga" target="_blank" class="btn btn-primary nav-cta">
+        <span>Konsultasi Gratis</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container text-center">
+      <span class="page-header-badge"><span class="page-header-icon"><img src="icons/ic-bag.svg" alt=""></span>
+      <span class="badge-sub">Biaya Transparan</span></span>
+      <h1 class="section-title">Estimasi Tarif Pengerjaan Tugas</h1>
+      <p class="section-desc">Biaya bersahabat untuk kantong pelajar &amp; mahasiswa. Tanpa biaya siluman dan bergaransi revisi.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="pricing-grid">
+        <!-- Paket Sekolah -->
+        <div class="pricing-card">
+          <div class="price-header">
+            <h3>Pelajar (SMP &amp; SMA/SMK)</h3>
+            <p>Cocok untuk tugas harian, PR, &amp; modul sekolah</p>
+          </div>
+          <div class="price-amount">
+            <span class="currency">Mulai</span>
+            <span class="nominal">15k</span>
+            <span class="period">/ tugas</span>
+          </div>
+          <ul class="price-features">
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> PR harian Matematika, IPA, IPS, Bahasa</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> PPT Presentasi kreatif &amp; rapi</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Rangkuman materi atau ulasan buku</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Laporan praktikum dasar sekolah</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Free garansi revisi minor</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Estimasi pengerjaan 1 - 2 hari kerja</li>
+          </ul>
+          <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20saya%20mau%20order%20paket%20pelajar" target="_blank" class="btn btn-outline btn-block">Pesan Paket Pelajar</a>
+          <p class="pricing-note">*Mulai 15k untuk PR ringan 1&ndash;2 halaman. Estimasi volume normal bisa dihitung di Kalkulator Biaya.</p>
+        </div>
+
+        <!-- Paket Mahasiswa (Featured) -->
+        <div class="pricing-card featured-price">
+          <div class="pricing-badge">Paling Sering Dipilih</div>
+          <div class="price-header">
+            <h3>Mahasiswa Reguler (D3/S1)</h3>
+            <p>Standar penulisan ilmiah &amp; sitasi kampus resmi</p>
+          </div>
+          <div class="price-amount">
+            <span class="currency">Mulai</span>
+            <span class="nominal">35k</span>
+            <span class="period">/ tugas</span>
+          </div>
+          <ul class="price-features">
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Makalah, Paper, Essay, &amp; Case Study</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Sitasi otomatis Mendeley / Zotero (APA/IEEE)</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Lolos Turnitin Similarity &lt; 10% (sesuai batas kampus)</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Bebas deteksi AI (parafrase manual humanis)</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Garansi revisi sampai sesuai rubrik dosen</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Estimasi pengerjaan 1 - 3 hari kerja</li>
+          </ul>
+          <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20saya%20mau%20order%20paket%20mahasiswa" target="_blank" class="btn btn-primary btn-block">Pesan Paket Mahasiswa</a>
+        </div>
+
+        <!-- Paket Express & Teknis -->
+        <div class="pricing-card">
+          <div class="price-header">
+            <h3>Express &amp; Tugas Teknis</h3>
+            <p>Deadline super mepet, coding, &amp; olah data</p>
+          </div>
+          <div class="price-amount">
+            <span class="currency">Mulai</span>
+            <span class="nominal">50k</span>
+            <span class="period">/ tugas</span>
+          </div>
+          <ul class="price-features">
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Deadline kilat (3 jam, 6 jam, s/d 12 jam)</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Coding pemrograman (Python, Web, C++, Java)</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Olah data statistik (SPSS, SmartPLS, Excel)</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Bimbingan essay lomba / beasiswa / skripsi</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Prioritas admin jalur VIP 24 jam</li>
+            <li><img src="icons/ic-check.svg" alt="" class="badge-ic"> Full support sampai tugas tuntas ACC</li>
+          </ul>
+          <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20saya%20mau%20order%20paket%20express%20teknis" target="_blank" class="btn btn-outline btn-block">Pesan Paket Express</a>
+        </div>
+      </div>
+
+      <div class="price-calc-cta text-center" style="margin-top: 40px; padding: 36px; background: rgba(255,255,255,0.9); border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--card-shadow);">
+        <h3>Mau tahu perkiraan biaya tugas spesifikmu secara otomatis?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">Gunakan kalkulator interaktif kami untuk menghitung simulasi harga berdasarkan jenjang, jumlah halaman, dan deadline.</p>
+        <a href="cek-estimasi.html" class="btn btn-primary btn-lg">
+          Buka Kalkulator Cek Estimasi Biaya &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <div class="logo-icon-wrap">
+            <img src="logo.svg" alt="KelarinAja Logo" class="brand-logo-img">
+          </div>
+          <span class="logo-text">Kelarin<span class="logo-accent">Aja</span>.</span>
+        </a>
+        <p class="footer-desc">Partner akademik andalan siswa dan mahasiswa se-Indonesia. Cepat, tuntas, rahasia, dan terpercaya.</p>
+        <div class="footer-social-row">
+          <a href="https://wa.me/6285770626647" target="_blank" class="footer-social-link" title="WhatsApp Admin Resmi">
+            <img src="logo-social-wa.svg" alt="WhatsApp" class="footer-social-icon">
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://instagram.com/kelarinaja.id" target="_blank" class="footer-social-link" title="Instagram: @kelarinaja.id">
+            <img src="logo-social-ig.svg" alt="Instagram" class="footer-social-icon">
+            <span>Instagram</span>
+          </a>
+          <a href="https://tiktok.com/@kelarinaja" target="_blank" class="footer-social-link" title="TikTok: @kelarinaja">
+            <img src="logo-social-tiktok.svg" alt="TikTok" class="footer-social-icon">
+            <span>TikTok</span>
+          </a>
+        </div>
+        <div class="footer-trust-chips">
+          <span class="ft-chip"><img class="badge-ic" src="icons/ic-bolt.svg" alt=""> Kilat 3 Jam</span>
+          <span class="ft-chip"><img class="badge-ic" src="icons/ic-lock.svg" alt=""> Privasi 100%</span>
+          <span class="ft-chip"><img class="badge-ic" src="icons/ic-check.svg" alt=""> Garansi Revisi</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Halaman Portal</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html">Kategori Layanan</a></li>
+          <li><a href="cara-order.html">Panduan Cara Order</a></li>
+          <li><a href="harga.html">Daftar Tarif &amp; Paket</a></li>
+          <li><a href="cek-estimasi.html">Cek Estimasi Biaya</a></li>
+          <li><a href="tentang.html">Tentang &amp; Jaminan Mutu</a></li>
+          <li><a href="faq.html">Tanya Jawab (FAQ)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+                <h4>Metode Pembayaran</h4>
+        <div class="payment-logo-row">
+          <div class="pay-card" title="Bank BCA"><img src="logo-pay-bca.svg" alt="BCA"></div>
+          <div class="pay-card" title="Bank Mandiri"><img src="logo-pay-mandiri.svg" alt="Mandiri"></div>
+          <div class="pay-card" title="Bank BRI"><img src="logo-pay-bri.svg" alt="BRI"></div>
+          <div class="pay-card" title="Bank BNI"><img src="logo-pay-bni.svg" alt="BNI"></div>
+          <div class="pay-card pay-card-qris" title="QRIS Semua Pembayaran"><img src="logo-pay-qris.svg" alt="QRIS"></div>
+          <div class="pay-card" title="DANA E-Wallet"><img src="logo-pay-dana.svg" alt="DANA"></div>
+          <div class="pay-card" title="GoPay E-Wallet"><img src="logo-pay-gopay.svg" alt="GoPay"></div>
+          <div class="pay-card" title="ShopeePay E-Wallet"><img src="logo-pay-shopeepay.svg" alt="ShopeePay"></div>
+        </div>
+        <p class="footer-safe-note" style="margin-top: 14px; font-size: 0.8rem; color: #64748B; text-wrap: balance;">
+           Transaksi aman • DP 50% tersedia • Privasi terjaga 100%
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 KelarinAja. All rights reserved. Solusi pengerjaan tugas &amp; asistensi akademik terpercaya se-Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20tanya%20harga" target="_blank" class="floating-wa" title="Hubungi Admin WhatsApp">
+    <img src="logo-social-wa.svg" alt="WA" style="width: 20px; height: 20px; display: block;">
+    <span class="wa-text">Chat Admin</span>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

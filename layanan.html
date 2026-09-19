@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layanan Akademik — KelarinAja</title>
+  <meta name="description" content="Kategori lengkap pengerjaan tugas sekolah SMP, SMA, dan Kuliah D3/S1, hingga coding dan olah data statistik.">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon-wrap">
+          <img src="logo.svg" alt="KelarinAja Logo" class="brand-logo-img">
+        </div>
+        <span class="logo-text">Kelarin<span class="logo-accent">Aja</span>.</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="layanan.html" class="active">Layanan</a>
+        <a href="cara-order.html">Cara Order</a>
+        <a href="harga.html">Tarif</a>
+        <a href="cek-estimasi.html" >Cek Estimasi Biaya</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20konsultasi%20tugas" target="_blank" class="btn btn-primary nav-cta">
+        <span>Konsultasi Gratis</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Header Banner -->
+  <section class="page-header">
+    <div class="container text-center">
+      <span class="page-header-badge"><span class="page-header-icon"><img src="icons/ic-doc.svg" alt=""></span>
+      <span class="badge-sub">Katalog Lengkap</span></span>
+      <h1 class="section-title">Layanan Tugas Semua Jenjang Pendidikan</h1>
+      <p class="section-desc">Pilih kategori tugasmu. Dikerjakan oleh tim ahli sesuai mata pelajaran dan jurusan kuliah.</p>
+    </div>
+  </section>
+
+  <!-- 3 Main Segmented Banners -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="services-banner-grid">
+        <!-- Card 1: Sekolah -->
+        <div class="service-banner-card">
+          <div class="banner-img-wrap">
+            <img src="service-sekolah.jpg" alt="Jasa Tugas Sekolah" class="banner-img">
+          </div>
+          <div class="banner-card-body">
+            <div class="banner-tag">Jenjang SMP &amp; SMA / SMK</div>
+            <h3>Layanan Tugas Sekolah</h3>
+            <p>Bebas stres dari PR harian menumpuk, rangkuman bab, pembuatan PPT presentasi estetik, tugas portofolio, hingga modul latihan ujian sekolah.</p>
+            <div class="banner-features">
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> PR Semua Mapel (IPA, IPS, Bahasa, Matematika)</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> PPT Animasi &amp; Desain Rapi</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Rangkuman Materi &amp; Portofolio</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Laporan Praktikum Dasar</span>
+            </div>
+            <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20order%20tugas%20sekolah" target="_blank" class="btn btn-primary btn-block">
+              Order Tugas Sekolah via WA &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Kuliah (Featured) -->
+        <div class="service-banner-card featured-banner">
+          <div class="popular-ribbon"><img src="icons/ic-trophy.svg" alt="" style="width:12px;height:12px;display:inline-block;vertical-align:-2px;filter:brightness(0) invert(1);margin-right:4px;">TERPOPULER</div>
+          <div class="banner-img-wrap">
+            <img src="service-kuliah.jpg" alt="Jasa Tugas Kuliah" class="banner-img">
+          </div>
+          <div class="banner-card-body">
+            <div class="banner-tag">Mahasiswa D3 / S1</div>
+            <h3>Layanan Tugas Kuliah &amp; Skripsi</h3>
+            <p>Penyusunan essay kritis, makalah ilmiah, review jurnal nasional &amp; internasional, resume materi kuliah, analisa studi kasus, hingga asistensi skripsi.</p>
+            <div class="banner-features">
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Sitasi Mendeley / Zotero Resmi</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Lolos Turnitin Similarity &lt; 10%</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Format Sesuai Panduan Kampus</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Free Bimbingan &amp; Revisi Sampai ACC</span>
+            </div>
+            <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20order%20tugas%20kuliah" target="_blank" class="btn btn-primary btn-block">
+              Order Tugas Kuliah via WA &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Teknis & Olah Data Mahasiswa -->
+        <div class="service-banner-card">
+          <div class="banner-img-wrap">
+            <img src="service-teknis.jpg" alt="Jasa Tugas Coding dan Olah Data" class="banner-img">
+          </div>
+          <div class="banner-card-body">
+            <div class="banner-tag">Praktikum &amp; Tugas Akhir</div>
+            <h3>Layanan Coding, Olah Data &amp; Magang</h3>
+            <p>Coding praktikum berbagai bahasa pemrograman, olah data statistik skripsi (SPSS, SmartPLS, Excel), laporan magang, hingga resume jurnal praktikum.</p>
+            <div class="banner-features">
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Python, C++, Java, Web Development</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Olah Data SPSS, SEM SmartPLS, EViews</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Laporan Magang &amp; Kerja Praktik</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Full Source Code + Penjelasan Logika</span>
+            </div>
+            <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20order%20tugas%20teknis" target="_blank" class="btn btn-primary btn-block">
+              Order Tugas Teknis via WA &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Checklist Spesialisasi -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge-sub">Spesialisasi Tim Kami</span>
+        <h2 class="section-title">Bidang Studi yang Kami Kuasai</h2>
+        <p class="section-desc">Total 126+ tenaga ahli lintas rumpun ilmu, dengan 14 spesialis online siaga setiap saat.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><img src="icons/ic-scale.svg" alt="" class="inline-ic"></div>
+          <h4>Hukum, Sosial &amp; Politik</h4>
+          <p>Hukum Perdata, Pidana, Tata Negara, Hubungan Internasional, Sosiologi, Ilmu Komunikasi, dan Administrasi Publik.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="icons/ic-chart.svg" alt="" class="inline-ic"></div>
+          <h4>Ekonomi &amp; Bisnis</h4>
+          <p>Manajemen SDM/Pemasaran, Akuntansi Keuangan &amp; Pajak, Studi Kelayakan Bisnis, dan Analisis Investasi.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="icons/ic-code.svg" alt="" class="inline-ic"></div>
+          <h4>Teknik &amp; Informatika</h4>
+          <p>Informatika/Ilkom, Sistem Informasi, Teknik Elektro, Mesin, Sipil, dan Pemodelan Arsitektur.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="icons/ic-health.svg" alt="" class="inline-ic"></div>
+          <h4>Kesehatan &amp; Farmasi</h4>
+          <p>Kesehatan Masyarakat, Keperawatan, Kebidanan, Farmasi Klinis, dan Gizi (Review literatur &amp; laporan non-invasif).</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="icons/ic-flask.svg" alt="" class="inline-ic"></div>
+          <h4>MIPA &amp; Pertanian</h4>
+          <p>Matematika, Statistika Terapan, Fisika, Biologi Molekuler, Kimia Organik, Agribisnis, dan Teknologi Pangan.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><img src="icons/ic-grad.svg" alt="" class="inline-ic"></div>
+          <h4>Pendidikan &amp; Humaniora</h4>
+          <p>Pendidikan Guru (PGSD/PGPAUD), Kurikulum Merdeka, Sastra Indonesia, Sastra Inggris, Sejarah, dan Seni Desain.</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 48px;">
+        <a href="cek-estimasi.html" class="btn btn-primary btn-lg">
+          Cek Estimasi Biaya Tugasmu Sekarang &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <div class="logo-icon-wrap">
+            <img src="logo.svg" alt="KelarinAja Logo" class="brand-logo-img">
+          </div>
+          <span class="logo-text">Kelarin<span class="logo-accent">Aja</span>.</span>
+        </a>
+        <p class="footer-desc">Partner akademik andalan siswa dan mahasiswa se-Indonesia. Cepat, tuntas, rahasia, dan terpercaya.</p>
+        <div class="footer-social-row">
+          <a href="https://wa.me/6285770626647" target="_blank" class="footer-social-link" title="WhatsApp Admin Resmi">
+            <img src="logo-social-wa.svg" alt="WhatsApp" class="footer-social-icon">
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://instagram.com/kelarinaja.id" target="_blank" class="footer-social-link" title="Instagram: @kelarinaja.id">
+            <img src="logo-social-ig.svg" alt="Instagram" class="footer-social-icon">
+            <span>Instagram</span>
+          </a>
+          <a href="https://tiktok.com/@kelarinaja" target="_blank" class="footer-social-link" title="TikTok: @kelarinaja">
+                      <img src="logo-social-tiktok.svg" alt="TikTok" class="footer-social-icon">
+                      <span>TikTok</span>
+                    </a>
+                  </div>
+                  <div class="footer-trust-chips">
+                    <span class="ft-chip"><img class="badge-ic" src="icons/ic-bolt.svg" alt=""> Kilat 3 Jam</span>
+                    <span class="ft-chip"><img class="badge-ic" src="icons/ic-lock.svg" alt=""> Privasi 100%</span>
+                    <span class="ft-chip"><img class="badge-ic" src="icons/ic-check.svg" alt=""> Garansi Revisi</span>
+                  </div>
+      </div>
+      <div class="footer-col">
+        <h4>Halaman Portal</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html">Kategori Layanan</a></li>
+          <li><a href="cara-order.html">Panduan Cara Order</a></li>
+          <li><a href="harga.html">Daftar Tarif &amp; Paket</a></li>
+          <li><a href="cek-estimasi.html">Cek Estimasi Biaya</a></li>
+          <li><a href="tentang.html">Tentang &amp; Jaminan Mutu</a></li>
+          <li><a href="faq.html">Tanya Jawab (FAQ)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+                <h4>Metode Pembayaran</h4>
+        <div class="payment-logo-row">
+          <div class="pay-card" title="Bank BCA"><img src="logo-pay-bca.svg" alt="BCA"></div>
+          <div class="pay-card" title="Bank Mandiri"><img src="logo-pay-mandiri.svg" alt="Mandiri"></div>
+          <div class="pay-card" title="Bank BRI"><img src="logo-pay-bri.svg" alt="BRI"></div>
+          <div class="pay-card" title="Bank BNI"><img src="logo-pay-bni.svg" alt="BNI"></div>
+          <div class="pay-card pay-card-qris" title="QRIS Semua Pembayaran"><img src="logo-pay-qris.svg" alt="QRIS"></div>
+          <div class="pay-card" title="DANA E-Wallet"><img src="logo-pay-dana.svg" alt="DANA"></div>
+          <div class="pay-card" title="GoPay E-Wallet"><img src="logo-pay-gopay.svg" alt="GoPay"></div>
+          <div class="pay-card" title="ShopeePay E-Wallet"><img src="logo-pay-shopeepay.svg" alt="ShopeePay"></div>
+        </div>
+        <p class="footer-safe-note" style="margin-top: 14px; font-size: 0.8rem; color: #64748B; text-wrap: balance;">
+           Transaksi aman • DP 50% tersedia • Privasi terjaga 100%
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 KelarinAja. All rights reserved. Solusi pengerjaan tugas &amp; asistensi akademik terpercaya se-Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20konsultasi%20layanan" target="_blank" class="floating-wa" title="Hubungi Admin WhatsApp">
+    <img src="logo-social-wa.svg" alt="WA" style="width: 20px; height: 20px; display: block;">
+    <span class="wa-text">Chat Admin</span>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

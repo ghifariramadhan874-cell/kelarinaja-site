@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Cek Estimasi Biaya Tugas — KelarinAja</title>
+  <meta name="description" content="Hitung simulasi biaya pengerjaan tugas secara otomatis berdasarkan jenjang, jenis tugas, jumlah halaman, dan deadline.">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon-wrap">
+          <img src="logo.svg" alt="KelarinAja Logo" class="brand-logo-img">
+        </div>
+        <span class="logo-text">Kelarin<span class="logo-accent">Aja</span>.</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="cara-order.html">Cara Order</a>
+        <a href="harga.html">Tarif</a>
+        <a href="cek-estimasi.html" class="nav-highlight active"><img src="icons/ic-bolt.svg" alt="" class="badge-ic"> Cek Estimasi Biaya</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20konsultasi%20tugas" target="_blank" class="btn btn-primary nav-cta">
+        <span>Konsultasi Gratis</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container text-center">
+      <span class="page-header-badge"><span class="page-header-icon"><img src="icons/ic-bolt.svg" alt=""></span>
+      <span class="badge-sub">Kalkulator Cerdas</span></span>
+      <h1 class="section-title">Hitung Simulasi Biaya Tugas Kamu</h1>
+      <p class="section-desc">Pilih opsi pengerjaan di bawah ini untuk melihat perkiraan harga instan tanpa komitmen.</p>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 900px;">
+      <div class="calc-box-grid">
+        <!-- Form Options Kiri -->
+        <div class="calc-form-col">
+          <div class="calc-group">
+            <label class="calc-label"><span class="calc-step-num">1</span> Jenjang Pendidikan</label>
+            <div class="radio-pill-group">
+              <label class="radio-pill">
+                <input type="radio" name="jenjang" value="sekolah" checked>
+                <span>SMP / SMA / SMK</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="jenjang" value="kuliah">
+                <span>Mahasiswa (D3 / S1)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label"><span class="calc-step-num">2</span> Kategori Tugas</label>
+            <select id="kategoriTugas" class="calc-select">
+              <option value="pr">PR Harian / Modul Soal</option>
+              <option value="makalah">Makalah / Resume Materi</option>
+              <option value="paper">Paper Ilmiah / Review Jurnal</option>
+              <option value="ppt">Presentasi PPT Estetik</option>
+              <option value="coding">Coding &amp; Pemrograman</option>
+              <option value="olahdata">Olah Data Statistik (SPSS/SmartPLS)</option>
+              <option value="skripsi">Asistensi Draf Skripsi / Bab TA</option>
+            </select>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label"><span class="calc-step-num">3</span> Perkiraan Volume / Jumlah Halaman: <strong id="valHalaman">5 Halaman</strong></label>
+            <input type="range" id="sliderHalaman" min="1" max="40" value="5" class="calc-slider">
+            <div class="slider-ticks">
+              <span>1 Hal</span>
+              <span>10 Hal</span>
+              <span>20 Hal</span>
+              <span>40 Hal</span>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label"><span class="calc-step-num">4</span> Batas Waktu (Deadline Pengerjaan)</label>
+            <div class="radio-pill-group">
+              <label class="radio-pill">
+                <input type="radio" name="deadline" value="santai" checked>
+                <span>3 - 5 Hari (Santai)</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="deadline" value="reguler">
+                <span>1 - 2 Hari (Reguler)</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="deadline" value="express">
+                <span>Express (3 - 12 Jam)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Box Kanan -->
+        <div class="calc-result-col">
+          <div class="result-sticky-card">
+            <div class="result-header">
+              <span class="res-badge">ESTIMASI TOTAL BIAYA</span>
+              <div class="res-price-wrap">
+                <span class="res-currency">Rp</span>
+                <span id="totalPrice" class="res-price">35.000</span>
+              </div>
+              <p class="res-sub">*Harga final dapat menyesuaikan rubrik instruksi spesifik.</p>
+              <p class="res-min-note">Paket Pelajar mulai <strong>Rp 15.000</strong> (PR 1 halaman) &bull; Paket Mahasiswa mulai <strong>Rp 35.000</strong></p>
+            </div>
+
+            <div class="result-breakdown">
+              <div class="rb-row">
+                <span>Paket:</span>
+                <strong id="summaryPaket">Sekolah (SMP/SMA)</strong>
+              </div>
+              <div class="rb-row">
+                <span>Layanan:</span>
+                <strong id="summaryLayanan">PR Harian / Modul</strong>
+              </div>
+              <div class="rb-row">
+                <span>Volume:</span>
+                <strong id="summaryVolume">5 Halaman</strong>
+              </div>
+              <div class="rb-row">
+                <span>Kecepatan:</span>
+                <strong id="summaryDeadline">3 - 5 Hari Kerja</strong>
+              </div>
+            </div>
+
+            <div class="result-guarantees">
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Free Garansi Revisi</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> Pengecekan Anti-Plagiasi</span>
+              <span><img src="icons/ic-check.svg" alt="" class="badge-ic"> 100% Rahasia Terjaga</span>
+            </div>
+
+            <a id="btnOrderCalc" href="#" target="_blank" class="btn btn-wa-green btn-block btn-lg">
+              Kirim Rincian Ini ke WA &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <div class="logo-icon-wrap">
+            <img src="logo.svg" alt="KelarinAja Logo" class="brand-logo-img">
+          </div>
+          <span class="logo-text">Kelarin<span class="logo-accent">Aja</span>.</span>
+        </a>
+        <p class="footer-desc">Partner akademik andalan siswa dan mahasiswa se-Indonesia. Cepat, tuntas, rahasia, dan terpercaya.</p>
+        <div class="footer-social-row">
+          <a href="https://wa.me/6285770626647" target="_blank" class="footer-social-link" title="WhatsApp Admin Resmi">
+            <img src="logo-social-wa.svg" alt="WhatsApp" class="footer-social-icon">
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://instagram.com/kelarinaja.id" target="_blank" class="footer-social-link" title="Instagram: @kelarinaja.id">
+            <img src="logo-social-ig.svg" alt="Instagram" class="footer-social-icon">
+            <span>Instagram</span>
+          </a>
+          <a href="https://tiktok.com/@kelarinaja" target="_blank" class="footer-social-link" title="TikTok: @kelarinaja">
+            <img src="logo-social-tiktok.svg" alt="TikTok" class="footer-social-icon">
+            <span>TikTok</span>
+          </a>
+        </div>
+        <div class="footer-trust-chips">
+          <span class="ft-chip"><img class="badge-ic" src="icons/ic-bolt.svg" alt=""> Kilat 3 Jam</span>
+          <span class="ft-chip"><img class="badge-ic" src="icons/ic-lock.svg" alt=""> Privasi 100%</span>
+          <span class="ft-chip"><img class="badge-ic" src="icons/ic-check.svg" alt=""> Garansi Revisi</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Halaman Portal</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html">Kategori Layanan</a></li>
+          <li><a href="cara-order.html">Panduan Cara Order</a></li>
+          <li><a href="harga.html">Daftar Tarif &amp; Paket</a></li>
+          <li><a href="cek-estimasi.html">Cek Estimasi Biaya</a></li>
+          <li><a href="tentang.html">Tentang &amp; Jaminan Mutu</a></li>
+          <li><a href="faq.html">Tanya Jawab (FAQ)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+                <h4>Metode Pembayaran</h4>
+        <div class="payment-logo-row">
+          <div class="pay-card" title="Bank BCA"><img src="logo-pay-bca.svg" alt="BCA"></div>
+          <div class="pay-card" title="Bank Mandiri"><img src="logo-pay-mandiri.svg" alt="Mandiri"></div>
+          <div class="pay-card" title="Bank BRI"><img src="logo-pay-bri.svg" alt="BRI"></div>
+          <div class="pay-card" title="Bank BNI"><img src="logo-pay-bni.svg" alt="BNI"></div>
+          <div class="pay-card pay-card-qris" title="QRIS Semua Pembayaran"><img src="logo-pay-qris.svg" alt="QRIS"></div>
+          <div class="pay-card" title="DANA E-Wallet"><img src="logo-pay-dana.svg" alt="DANA"></div>
+          <div class="pay-card" title="GoPay E-Wallet"><img src="logo-pay-gopay.svg" alt="GoPay"></div>
+          <div class="pay-card" title="ShopeePay E-Wallet"><img src="logo-pay-shopeepay.svg" alt="ShopeePay"></div>
+        </div>
+        <p class="footer-safe-note" style="margin-top: 14px; font-size: 0.8rem; color: #64748B; text-wrap: balance;">
+           Transaksi aman • DP 50% tersedia • Privasi terjaga 100%
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 KelarinAja. All rights reserved. Solusi pengerjaan tugas &amp; asistensi akademik terpercaya se-Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6285770626647?text=Halo%20Admin%20KelarinAja,%20mau%20konsultasi%20tugas" target="_blank" class="floating-wa" title="Hubungi Admin WhatsApp">
+    <img src="logo-social-wa.svg" alt="WA" style="width: 20px; height: 20px; display: block;">
+    <span class="wa-text">Chat Admin</span>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
