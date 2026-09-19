@@ -1,8 +1,8 @@
-/* Hamburger menu mobile — toggle nav drawer */
+/* Hamburger menu mobile — toggle nav drawer (mobile-drawer) */
 (function () {
   const toggle = document.getElementById('menuToggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (!toggle || !navLinks) return;
+  const drawer = document.getElementById('mobileDrawer') || document.querySelector('.nav-links');
+  if (!toggle || !drawer) return;
 
   // Buat overlay
   let overlay = document.querySelector('.menu-overlay');
@@ -13,14 +13,14 @@
   }
 
   function openMenu() {
-    navLinks.classList.add('open');
+    drawer.classList.add('open');
     toggle.classList.add('active');
     overlay.classList.add('active');
     toggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
   function closeMenu() {
-    navLinks.classList.remove('open');
+    drawer.classList.remove('open');
     toggle.classList.remove('active');
     overlay.classList.remove('active');
     toggle.setAttribute('aria-expanded', 'false');
@@ -28,14 +28,18 @@
   }
 
   toggle.addEventListener('click', function () {
-    if (navLinks.classList.contains('open')) closeMenu();
+    if (drawer.classList.contains('open')) closeMenu();
     else openMenu();
   });
 
   overlay.addEventListener('click', closeMenu);
 
+  // Tombol X di dalam drawer
+  const closeBtn = document.getElementById('drawerClose');
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
   // Tutup pas link diklik
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
   // Tutup kalau resize ke desktop
   window.addEventListener('resize', function () {
