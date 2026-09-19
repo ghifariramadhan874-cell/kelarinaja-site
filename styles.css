@@ -2517,7 +2517,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 68px;
 }
 
 .pricing-card {
@@ -3295,8 +3295,11 @@ body {
 }
 
 .pay-card.pay-card-qris img {
-  height: 16px;
+  height: 20px;
   max-width: 64px;
+}
+.pay-card.pay-card-qris {
+  padding: 2px 4px;
 }
 
 /* Footer */
@@ -3507,9 +3510,9 @@ body {
 
 /* Footer Social Media Links */
 .footer-social-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  flex-wrap: wrap;
   margin-top: 20px;
 }
 
@@ -3521,7 +3524,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   padding: 6px 12px;
-  min-width: 108px;
+  min-width: 0;
   justify-content: center;
   transition: all 0.2s ease;
   text-decoration: none;
@@ -3548,23 +3551,27 @@ body {
 
 /* Footer trust chips - balances the brand column */
 .footer-trust-chips {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .ft-chip {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  justify-content: center;
+  gap: 6px;
   font-size: 0.72rem;
   font-weight: 700;
   color: #CBD5E1;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
-  padding: 5px 12px;
+  padding: 5px 8px;
+  min-width: 0;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .ft-chip .badge-ic {
