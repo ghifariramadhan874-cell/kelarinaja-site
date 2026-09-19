@@ -218,14 +218,19 @@ if (document.readyState === 'loading') {
   initPriceCalculator();
 }
 
-/* Floating WA: sembunyikan di atas (hero), muncul setelah scroll biar gak nutup konten */
+/* Floating WA: sembunyikan di atas (hero), muncul setelah scroll biar gak nutup konten.
+   Di footer: sembunyikan lagi supaya gak nutup copyright / logo pembayaran. */
 (function () {
   var wa = document.querySelector('.floating-wa');
   if (!wa) return;
   function upd() {
     var y = window.scrollY || document.documentElement.scrollTop;
-    wa.classList.toggle('wa-shown', y > 300);
+    var docH = document.documentElement.scrollHeight;
+    var vh = window.innerHeight;
+    var nearBottom = (y + vh) > (docH - 240);
+    wa.classList.toggle('wa-shown', y > 300 && !nearBottom);
   }
   window.addEventListener('scroll', upd, { passive: true });
+  window.addEventListener('resize', upd, { passive: true });
   upd();
 })();
