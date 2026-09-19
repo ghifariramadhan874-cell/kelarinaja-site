@@ -4923,6 +4923,44 @@ section[id], .section, .hero, .cta-banner {
   scroll-margin-top: 74px;
 }
 
+/* Footer safe note (badge trust di bawah logo pembayaran) */
+.footer-safe-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 0.74rem;
+  color: #94A3B8;
+  line-height: 1.2;
+}
+
+.footer-safe-note .fsn-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.footer-safe-note .fsn-dot {
+  color: #475569;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .footer-safe-note {
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 7px 18px;
+    margin-top: 14px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Footer: link nav tap target ≥ 40px, padding bawah aman dari FAB WA */
 @media (max-width: 640px) {
   .footer {
