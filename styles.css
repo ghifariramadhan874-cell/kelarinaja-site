@@ -4236,3 +4236,176 @@ body {
     display: none !important;
   }
 }
+
+/* ===== MOBILE POLISH OVERRIDES (agar rapi di HP) ===== */
+
+/* Floating WA: hidden at top, appears on scroll (anti nutupin konten) */
+.floating-wa {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.floating-wa.wa-shown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Price baseline alignment */
+.price-amount .currency,
+.price-amount .period {
+  align-self: flex-end;
+  padding-bottom: 0.25em;
+}
+.pricing-badge {
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+/* Result price + min note */
+.res-price-wrap .res-currency {
+  align-self: flex-end;
+  padding-bottom: 0.3em;
+}
+.res-min-note strong {
+  white-space: nowrap;
+}
+.rb-row {
+  gap: 12px;
+}
+
+/* Flat metric grid inside live card: 2 lajur di layar kecil + yang ketiga span penuh */
+@media (max-width: 480px) {
+  .live-metrics-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .live-metrics-row .live-metric-box:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Hero checklist kasih ruang kanan biar gak ketutup floating button */
+  .hero-checklist-grid {
+    margin-right: 56px;
+  }
+
+  /* Headline tools gak pecah 5 baris */
+  .tb-title {
+    font-size: 1.45rem;
+  }
+  .page-header .section-title {
+    font-size: 1.7rem;
+  }
+
+  /* Campus pills lebih kecil biar 2-3 per baris */
+  .cp-pill {
+    font-size: 0.66rem;
+    padding: 5px 10px;
+  }
+  .campus-pills {
+    gap: 6px;
+  }
+
+  /* Tools grid 2 kolom + kartu jadi vertikal (logo di atas) */
+  .verified-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .v-logo-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 14px 10px;
+  }
+  .v-brand-img-wrap {
+    margin: 0 auto;
+  }
+
+  /* CTA guarantees jadi 2x2 */
+  .cta-bottom-guarantee {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .c-badge-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Flow cards lebih lembut di mobile (border tipis, pop shadow kecil) */
+  .pop-flow-card {
+    border: 1.5px solid #CBD5E1;
+    border-radius: 12px;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .card-cyan   { box-shadow: 4px 4px 0 #06B6D4; }
+  .card-mint   { box-shadow: 4px 4px 0 #10B981; }
+  .card-purple { box-shadow: 4px 4px 0 #8B5CF6; }
+  .card-emerald{ box-shadow: 4px 4px 0 #10B981; }
+  .pop-card-number {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Nav CTA lebih ramping biar navbar gak sesak */
+  .nav-cta {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+
+  /* Opsi pill kalkulator jadi grid 2 kolom, full width, rapi */
+  .radio-pill-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .radio-pill span {
+    width: 100%;
+    text-align: center;
+  }
+  .radio-pill-group .radio-pill:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+
+  /* Label kalkulator wrap rapi (nilai halaman turun ke baris baru, rata kanan) */
+  .calc-label {
+    flex-wrap: wrap;
+  }
+  .calc-label strong {
+    margin-left: auto;
+  }
+
+  /* Footer sosial: 3 tombol sebaris rata */
+  .footer-social-link {
+    flex: 1 1 30%;
+    min-width: 0;
+    justify-content: center;
+    padding: 6px 6px;
+    font-size: 0.76rem;
+  }
+
+  /* Footer trust chips: 3 sebaris */
+  .ft-chip {
+    flex: 1 1 30%;
+    justify-content: center;
+    padding: 5px 8px;
+    font-size: 0.66rem;
+  }
+
+  /* Pembayaran jadi 2 kolom biar logo kebaca */
+  .payment-logo-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .pay-card {
+    height: 40px;
+    padding: 4px 6px;
+  }
+  .pay-card img {
+    max-height: 18px;
+  }
+}

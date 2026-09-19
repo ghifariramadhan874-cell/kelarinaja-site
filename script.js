@@ -217,3 +217,15 @@ if (document.readyState === 'loading') {
   initCounterAnimation();
   initPriceCalculator();
 }
+
+/* Floating WA: sembunyikan di atas (hero), muncul setelah scroll biar gak nutup konten */
+(function () {
+  var wa = document.querySelector('.floating-wa');
+  if (!wa) return;
+  function upd() {
+    var y = window.scrollY || document.documentElement.scrollTop;
+    wa.classList.toggle('wa-shown', y > 300);
+  }
+  window.addEventListener('scroll', upd, { passive: true });
+  upd();
+})();
