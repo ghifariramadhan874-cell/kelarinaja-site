@@ -2517,7 +2517,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   align-items: center;
-  margin-bottom: 68px;
+  margin-bottom: 44px;
 }
 
 .pricing-card {
